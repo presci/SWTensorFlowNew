@@ -1,0 +1,42 @@
+convert  pause01.jpg -crop 420x150+10+950 pause01-edit.jpg
+convert  Ok01.jpg -crop 420x150+805+815 Ok01-edit.jpg
+convert  rune01.jpg -crop 420x150+645+800 rune01-edit.jpg
+./cropimage victory001.jpg 655 90
+./cropimage 5starrune.jpg 745 580
+./cropimage defeated01.jpg 600 90
+./cropimage giantdefeat.jpg 540 640 #revivebutton
+./cropimage home.jpg 1000 890
+./cropimage revivebutton.jpg 540 640
+./cropimage rune01.jpg  645 800
+
+  318  ./cropimage regulardefeat.jpg 600 90
+  319  mv regulardefeat-edit.jpg defeated/
+
+  313  ./cropimage regulardefeat.jpg 540 640
+  314  mv regulardefeat-edit.jpg revivebutton/
+
+  306  ./cropimage play01.jpg 10 950
+  309  mv play01-edit.jpg play
+
+  298  ./cropimage rune01.jpg  645 800
+  299  mv rune01-edit.jpg  rune
+
+  280  ./cropimage lost001.jpg 540 640
+  282  mv lost001-edit.jpg revivebutton/
+
+
+./cropimage replay001.jpg 500 510 #replaybutton
+./cropimage replay01.jpg 500 510
+mv replay01-edit.jpg replaybutton/
+
+./cropimage defeated001.jpg 600 90
+ mv defeated001-edit.jpg defeated
+
+./cropimage start001.jpg 1480 680 #start button
+
+
+
+
+
+
+
