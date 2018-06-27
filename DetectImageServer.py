@@ -17,7 +17,8 @@ file_directory="/home/prasad/workspace/summonerswar/"
 actionmapper={
     "victory":0, "defeated":1, "levelup":2, "maxlevel":3,
     "5starrune":4, "home":5, "play":6, "replaybutton":7,
-    "revivebutton":8, "rune":9, "startbutton":10,"cleardungeon":11
+    "revivebutton":8, "rune":9, "startbutton":10,"cleardungeon":11, "pause":12,
+    "okbutton":13
 }
 """
 victory levelup = 5
@@ -135,6 +136,10 @@ def classify_image(imagename):
         print (rslt)
     absresults = list(filter(lambda x : x[1] > 0.9, results))
     if ( len(absresults) == 0):
+        print("1 result found 0")
+        absresults = list(filter(lambda x: x[0] == "victory" and x[1] > 0.7, results))
+    if (len(absresults) == 0):
+        print ("2 result found 0")
         classify_set.add(results[-1][0])
     for i in absresults:
         classify_set.add(i[0])
